@@ -1,0 +1,230 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CV Romain CURTET{% endblock %}
+
+{% block body %}
+    <section id="me" class="container-fluid">
+        <div class="heading me_body fadein">
+            <h3>Bonjour, je suis</h3>
+            <h1 style="font-size: 4rem">Romain <br>CURTET</h1>
+            <h3>Développeur Web Junior</h3>
+            <h3>Certification TOSA PHP 3W Academy : 600/1000</h3>
+        </div>
+        <div class="profil-picture fadein">
+            <img src="images/photo.png" alt="Romain CURTET">
+        </div>
+    </section>
+    <section id="about" class="container-fluid">
+        <div class="white-divider">
+        </div>
+        <div class="heading fadein">
+            <h2>Coordonnées</h2>
+        </div>
+        <div class="fadein">
+            <p>5 Rue Jean-Pierre LEVY 69003 LYON<br>
+                06.32.08.61.44<br>
+                contact@romaincurtet.com<br>
+                {% set birthday = "1987-08-29" %}
+                {% set today = date() %}
+                {% set diff =date(today|date('Y-m-d')).diff(date(birthday|date('Y-m-d'))) %}
+                {{diff|date('%y')}} ans- Permis B avec véhicule<br>
+            </p>
+            <a href="docs/Romain CURTET.pdf" class="button" target="_blank">
+                <img src="images/CV.png" alt="CV">
+                <strong>CV</strong>
+                <span>Romain CURTET.pdf</span>
+            </a>
+            <a href="https://www.linkedin.com/in/romain-curtet/" class="button" target="_blank">
+                <img src="images/LinkedIn.png" alt="LinkedIn">
+                <strong>Profil LinkedIn</strong>
+                <span>linkedin.com/in/romain-curtet/</span>
+            </a>
+            <a href="https://github.com/RomainC2908" class="button" target="_blank">
+                <img src="images/Github.png" alt="Github">
+                <strong>Github</strong>
+                <span>github.com/RomainC2908</span>
+            </a>
+        </div>
+    </section>
+    <section id="skills" class="container-fluid">
+        <div class="blue-divider">
+        </div>
+        <div class="heading fadein">
+            <h2>Compétences</h2>
+        </div>
+        <div class="fadein">
+            <div class="service col-11 col-md-5 col-xl-3">
+                <h4>Backend</h4>
+                <div>
+                    <img src="images/PHP.png" alt="PHP">
+                    <img src="images/Symfony.png" alt="Symfony">
+                </div>
+                <h5>Je développe des applications PHP (dépôt de documents / formulaire de contact) et je m'initie au framework Symfony 5.</h5>
+            </div>
+            <div class="service col-11 col-md-5 col-xl-3">
+                <h4>Frontend</h4>
+                <div>
+                    <img src="images/Bootstrap.png" alt="Bootstrap">
+                </div>
+                <h5>Débutant dans le front, j'utilise les bases HTML, CSS et JS ainsi que le framework Bootstrap. Je vise par la suite l'apprentissage d'un framework JS.</h5>
+            </div>
+            <div class="service col-11 col-md-5 col-xl-3">
+                <h4>Base de données</h4>
+                <div>
+                    <img src="images/MySQL.png" alt="MySQL">
+                </div>
+                <h5>J'utilise principalement MySQL et je connais le langage SQL.</h5>
+            </div>
+            <div class="service col-11 col-md-5 col-xl-3">
+                <h4>Compétences annexes</h4>
+                <h5>Je travaille sous Windows<br>
+                Je possède mon compte GitHub<br>
+                Anglais: lu, écrit</h5>
+            </div>
+            <div class="service col-11 col-md-5 col-xl-3">
+                <h4>Savoir-être</h4>
+                <h5>Travail d'équipe<br>
+                Bonne communication<br>
+                Rigoureux<br>
+                Persévérant
+                </h5>
+            </div>
+            <div class="service col-11 col-md-5 col-xl-3">
+                <h4>En +</h4>
+                <h5>Je pratique la guitare dans un groupe de rock amateur et j'envisage de me mettre à la basse.</h5>
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <div class="container">
+            <div class="white-divider">
+            </div>
+            <div class="heading fadein">
+                <h2>Expériences Professionnelles</h2>
+            </div>
+            <ul class="timeline fadein">
+                <li>
+                    <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
+                    <div class="timeline-panel-container">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3>FIDUCIAL</h3>
+                                <h4>Développeur web junior</h4>
+                                <p class="text-muted"><small class="fas fa-clock"></small> Mai 2020 - Septembre 2020</p>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Mise en place de tables pivots (composant JS) générant des tableaux croisés dynamiques automatiquement sur des pages JSP</p>
+                                <p>Participation au développement d'une appli web (affichage, sélection, enregistrement en base de données) avec VUE.JS</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
+                    <div class="timeline-panel-container-inverted">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3>CARSO-LSEHL</h3>
+                                <h4>Technicien de laboratoire / Référent Technique</h4>
+                                <p class="text-muted"><small class="fas fa-clock"></small> Septembre 2011 - Septembre 2019</p>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Résolution de problèmes techniques</p>
+                                <p>Diffusion d'information au sein d'une équipe</p>
+                                <p>Gestion des analyses et requêtes clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container ">
+            <div class="blue-divider"></div>
+            <div class="heading fadein">
+                <h2>Formations</h2>
+            </div>
+            <div class="fadein">
+                    <div class="education-block col-11 col-sm-5 col-lg-2">
+                        <h5><small class="fas fa-clock"></small> septembre 2009 - septembre 2011</h5>
+                        <span class="fas fa-graduation-cap"></span>
+                        <h3>Université Claude BERNARD Lyon 1</h3>
+                        <h4>Master analyse et contrôle</h4>
+                        <div class="blue-divider"></div>
+                        <p>Analyses physico-chimiques</p>
+                    </div>
+                    <div class="education-block col-11 col-sm-5 col-lg-2">
+                        <h5><small class="fas fa-clock"></small> janvier 2020 - mars 2020</h5>
+                        <span class="fas fa-graduation-cap"></span>
+                        <h3>Global Knowledge - Lyon</h3>
+                        <h4>Formation Développeur Informatique</h4>
+                        <div class="blue-divider"></div>
+                        <p>HTML/CSS, JAVASCRIPT, PHP, MySQL, SYMFONY</p>
+                        <strong>Projet final: création d'un site bancaire avec Symfony </strong>
+                    </div>
+                    <div class="education-block col-11 col-sm-5 col-lg-2">
+                        <h5><small class="fas fa-clock"></small> janvier 2021 - fevrier 2021</h5>
+                        <span class="fas fa-graduation-cap"></span>
+                        <h3>AJC Formation</h3>
+                        <h4>Formation Développeur Web</h4>
+                        <div class="blue-divider"></div>
+                        <p>HTML/CSS, JAVASCRIPT, BOOTSTRAP, PHP, MySQL</p>
+                        <strong>Projet final: création d'un site de vente de matériel de musique</strong>
+                    </div>
+                    <div class="education-block col-11 col-sm-5 col-lg-2">
+                        <h5><small class="fas fa-clock"></small> mars 2021 - {{today|format_date('medium', pattern='MMM Y', locale='fr')}}</h5>
+                        <span class="fas fa-graduation-cap"></span>
+                        <h3>Formation autodidacte</h3>
+                        <h4>Développeur Web</h4>
+                        <div class="blue-divider"></div>
+                        <p>HTML/CSS, PHP, SYMFONY</p>
+                        <strong>Création d'un site de dépôt de documents<br> Refonte du site de vente de matériel de musique en SYMFONY</strong>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <div class="white-divider">
+            </div>
+            <div class="heading fadein">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="row fadein">
+                <div class="col-sm-4">
+                    <a class="thumbnail" href="http://toutpourlagratte.romaincurtet.com/" target="_blank">
+                        <img src="images/guitare.jfif" alt="Tout Pour La Gratte (Site Fictif)">
+                    </a>
+                </div>
+            </div>
+    </section>
+    <section id="recommandations">
+        <div class="container">
+            <div class="blue-divider"></div>
+            <div class="heading fadein">
+                <h2>Recommandations</h2>
+            </div>
+            <div id="myCarousel" class="carousel slide text-center fadein" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <h3>Romain est quelqu'un d'organisé, il travaille avec rigueur et il n'hésite pas à alerter et
+                            remonter les informations à ses responsables.<br> Romain est une personne de confiance, sur
+                            qui on peut compter, motivé et efficace.</h3>
+                        <h4>Delphine THOMAS <br>Specialist, Sales Support GC/GCMS, France chez Thermo Fisher Scientific
+                        </h4>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="fas fa-chevron-left fa-2x"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="fas fa-chevron-right fa-2x"></span>
+                    </a>
+                </div>
+            </div>
+    </section>
+{% endblock %}
