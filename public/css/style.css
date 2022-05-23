@@ -1,3 +1,10 @@
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 /* GENERAL */
 
 body {
@@ -159,7 +166,7 @@ a strong {
     margin: 20px;
     padding: 20px;
     border-radius: 3px;
-    height: 16rem;
+    height: 15rem;
     transition: all 1s ease;
 }
 
@@ -331,14 +338,12 @@ a strong {
 
 #portfolio {
     background-color: #10027b;
-}
-
-#portfolio .heading h2 {
     color: #fff;
 }
 
 #portfolio .thumbnail img {
-    width: 80%;
+    max-width: 100%;
+    height: auto;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
 }
@@ -347,6 +352,61 @@ a strong {
     filter: none;
     -webkit-filter: none;
     transition: all 1s ease;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px 8px 0 0;
+    transition: box-shadow .3s;
+    height: 100%;
+}
+
+.project-body {
+    padding: 40px 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #fff;
+}
+
+.project-tags {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.project-name {
+    font-size: 24px;
+    margin: 10px 0 20px;
+    font-weight: 600;
+}
+
+.project-desc {
+    margin-bottom: 50px;
+}
+
+.project-action {
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 7px 30px;
+    border: 1px solid #fff;
+    border-radius: 2px 2px 2px 2px;
+    transition: 1s;
+    text-decoration: none!important;
+}
+
+.project-action:hover {
+    color: #10027b;
+    background-color: #fff;
+    border: 1px solid #10027b;
+    transition: 1s;
 }
 
 /* RECOMMANDATION */
@@ -390,16 +450,20 @@ a strong {
 /* CONTACT */
 
 #contact {
-    background-color: #10027b;
+    background-color: #fff;
+    color: #10027b;
+    text-align: center;
 }
 
-#contact .heading h2 {
-    color: #fff;
+.contact-title {
+    padding: 10px;
+    margin: 10px 0;
 }
 
-#contact-form {
+.contact-form {
     font-size: 20px;
-    color: #fff;
+    width: 50%; 
+    margin-left : 25%;
 }
 
 .form-control {
@@ -407,17 +471,36 @@ a strong {
     height: 50px;
 }
 
-.thank-you {
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 22px;
+.btn {
+    background-color: #10027b;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 20px;
+    margin: 40px 0;
+    font-size: 20px;
+    margin: 40px 0;
 }
 
-.comments {
+.btn:hover {
+    background-color: fff;
+    color: #10027b;
+    border: 1px solid #10027b;
+}
+
+.form-label {
+    margin: 20px 0 15px 0;
     color: #fff;
-    font-style: italic;
-    height: 25px;
+    background-color: #10027b;;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.form-input {
+    padding:20px;
+}
+
+.contact-text {
+    height:120px;
 }
 
 /* FOOTER */

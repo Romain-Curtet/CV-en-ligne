@@ -66,7 +66,7 @@
                 <div>
                     <img src="images/Bootstrap.png" alt="Bootstrap">
                 </div>
-                <h5>Débutant dans le front, j'utilise les bases HTML, CSS et JS ainsi que le framework Bootstrap. Je vise par la suite l'apprentissage d'un framework JS.</h5>
+                <h5>J'utilise les bases HTML, CSS et JS ainsi que le framework Bootstrap.</h5>
             </div>
             <div class="service col-11 col-md-5 col-xl-3">
                 <h4>Base de données</h4>
@@ -193,10 +193,16 @@
                 <h2>Portfolio</h2>
             </div>
             <div class="row fadein">
-                <div class="col-sm-4">
+                <div class="project col-12 col-md-6 col-xl-4">
                     <a class="thumbnail" href="http://toutpourlagratte.romaincurtet.com/" target="_blank">
-                        <img src="images/guitare.jfif" alt="Tout Pour La Gratte (Site Fictif)">
+                        <img src="images/toutpourlagratte.png" alt="Tout Pour La Gratte (Site Fictif)">
                     </a>
+                    <div class="project-body">
+                        <div class="project-tags">SYMFONY, CSS, BOOTSTRAP</div>
+                        <div class="project-name">Tout Pour La Gratte</div>
+                        <div class="project-desc">Site fictif de e-commerce, possibilité de contact et de paiement fictif</div>
+                        <a class="project-action" href="http://toutpourlagratte.romaincurtet.com/" target="_blank">En Savoir Plus</a>
+                    </div>
                 </div>
             </div>
     </section>
@@ -227,4 +233,5 @@
                 </div>
             </div>
     </section>
+    {% include "front/_footer.html.twig" %}
 {% endblock %}

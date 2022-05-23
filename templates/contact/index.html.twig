@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Me contacter{% endblock %}
+
+{% block body %}
+<div id='contact' class='container-list'>
+    <div>
+        <h1 class='contact-title'>Me contacter</h1>
+        {% if success %}
+            <div class='alert notification'>{{ success }}</div>
+            <hr>
+        {% endif %}
+            {{ form_start(form, {'attr': {'class':'contact-form'}}) }}
+            <div>
+                <div class='form-input'>
+                    {{ form_label(form.firstname, 'Prénom', {'label_attr': {'class':'form-label'}}) }}
+                    {{ form_widget(form.firstname, {'attr': {'class':'form-control', 'placeholder':'Votre prénom'}}) }}
+                </div>
+                <div class='form-input'>
+                    {{ form_label(form.lastname, 'Nom', {'label_attr': {'class':'form-label'}}) }}
+                    {{ form_widget(form.lastname, {'attr': {'class':'form-control', 'placeholder':'Votre nom'}}) }}
+                </div>
+                <div class='form-input'>
+                    {{ form_label(form.email, 'Email', {'label_attr': {'class':'form-label'}}) }}
+                    {{ form_widget(form.email, {'attr': {'class':'form-control', 'placeholder':'Votre email'}}) }}
+                    <div class='error'>
+                        {{ form_errors(form.email) }}
+                    </div>
+                </div>
+                <div class='form-input'>
+                    {{ form_label(form.content, 'Message', {'label_attr': {'class':'form-label'}}) }}
+                    {{ form_widget(form.content, {'attr': {'class':'form-control contact-text', 'placeholder':'En quoi puis-je vous aider?'}}) }}
+                </div>
+                <div class='form-input'>
+                    {{ form_widget(form.submit, {'attr': {'class':'btn'}}) }}
+                </div>
+                {{ form_rest(form) }}
+            </div>
+            {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}
